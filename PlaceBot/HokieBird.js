@@ -6,7 +6,7 @@
 // @author       mbarkhau, modified by Anthony Wagner for VT
 // @match        https://www.reddit.com/place?webview=true
 // @grant        none
-// @updateURL    https://github.com/wagnera/Projects/PlaceBot/master/HokieBird.js
+// @updateURL    https://github.com/wagnera/Projects/blob/master/PlaceBot/HokieBird.js
 // ==/UserScript==
 
 (function() {
