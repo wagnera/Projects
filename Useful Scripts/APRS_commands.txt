@@ -1,0 +1,1 @@
+ax25beacon -s KN4GQL-7 -c [ -p WIDE1-1 -p WIDE2-1 -- 37.280210 -80.438675 0
