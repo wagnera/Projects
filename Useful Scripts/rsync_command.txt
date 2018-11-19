@@ -1,0 +1,1 @@
+rsync -azv --progress --bwlimit 3 pi@192.168.0.2:/home/pi/file* /home/anthony/rec_files/

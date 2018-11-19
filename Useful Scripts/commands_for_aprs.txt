@@ -1,0 +1,1 @@
+nc -l -u 7355 |     sox -t raw -esigned-integer -b16 -r 48000 - -esigned-integer -b16 -r 22050 -t raw - |     multimon-ng -t raw -a SCOPE -a AFSK1200 -f alpha - | sed -u -r 's/^.{6}//' | socat STDIN TCP-LISTEN:14580,reuseaddr,fork
