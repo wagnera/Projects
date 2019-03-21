@@ -1,0 +1,11 @@
+#Enter Teams for round of 64 in order from 1 seed to 16 seed in the order of division Mid-West, West, East, South
+Mid-West
+North Carolina, Kentucky, Houston, Kansas, Auburn, Iowa State, Wofford, Utah State, Washington, Seton Hall, Ohio State, New Mexico State, Northeastern, Georgia State, Abilene Christian, Iona
+West:
+Gonzaga, Michigan, Texas Tech, Florida State, Marquette, Buffalo, Nevada, Syracuse, Baylor, Florida, Arizona State, Murray State, Vermont, Northern Kentucky, Montana, Fairleigh Dickinson
+East:
+Duke, Michigan State, Louisiana State, Virginia Tech, Mississippi State, Maryland, Louisville, Virginia Commonwealth, Central Florida, Minnesota, Belmont, Liberty, Saint Louis, Yale, Bradley, North Dakota State
+South:
+Virginia, Tennessee, Purdue, Kansas State, Wisconsin, Villanova, Cincinnati, Mississippi, Oklahoma, Iowa, Saint Mary's (CA), Oregon, UC-Irvine, Old Dominion, Colgate, Gardner-Webb
+
+North Carolina, Kentucky, Houston, Kansas, Auburn, Iowa State, Wofford, Utah State, Washington, Seton Hall, Ohio State, New Mexico State, Northeastern, Georgia State, Abilene Christian, Iona, Gonzaga, Michigan, Texas Tech, Florida State, Marquette, Buffalo, Nevada, Syracuse, Baylor, Florida, Arizona State, Murray State, Vermont, Northern Kentucky, Montana, Fairleigh Dickinson, Duke, Michigan State, Louisiana State, Virginia Tech, Mississippi State, Maryland, Louisville, Virginia Commonwealth, Central Florida, Minnesota, Belmont, Liberty, Saint Louis, Yale, Bradley, North Dakota State, Virginia, Tennessee, Purdue, Kansas State, Wisconsin, Villanova, Cincinnati, Mississippi, Oklahoma, Iowa, Saint Mary's (CA), Oregon, UC-Irvine, Old Dominion, Colgate, Gardner-Webb

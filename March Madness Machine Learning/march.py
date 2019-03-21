@@ -23,10 +23,10 @@ Round0.extend(['North Carolina Central','UC-Davis','Providence','Southern Califo
 Round0INDEXs=[16,11,16,11] #Index is the seed of the teams playing in each game for play in games
 #########################
 
-#Enter Teams for round of 64 in order from 1 seed to 16 seed in the order of division Mid-West West, East, South
+#Enter Teams for round of 64 in order from 1 seed to 16 seed in the order of division Mid-West, West, East, South
 #Order= M W E S
 Round1=list()
-Round1.extend(['Kansas','Louisville','Oregon','Purdue','Iowa State','Creighton','Michigan','Miami (FL)','Michigan State','Oklahoma State','Rhode Island','Nevada','Vermont','Iona','Jacksonville State','UC-Davis','Gonzaga','Arizona','Florida State','West Virginia','Notre Dame','Maryland',"Saint Mary's (CA)",'Northwestern','Vanderbilt','Virginia Commonwealth','Xavier','Princeton','Bucknell','Florida Gulf Coast','North Dakota','South Dakota State','Villanova','Duke','Baylor','Florida','Virginia','Southern Methodist','South Carolina','Wisconsin','Virginia Tech','Marquette','Southern California','North Carolina-Wilmington','East Tennessee State','New Mexico State','Troy',"Mount St. Mary's",'North Carolina','Kentucky','UCLA','Butler','Minnesota','Cincinnati','Dayton','Arkansas','Seton Hall','Wichita State','Wake Forest','Middle Tennessee','Winthrop','Kent State','Northern Kentucky','Texas Southern'])#['Virginia','Michigan State','Utah','Iowa State','Purdue','Seton Hall','Dayton','Texas Tech','Butler','Syracuse','Gonzaga','Arkansas-Little Rock','Iona','Fresno State','Middle Tennessee','Hampton','Oregon','Oklahoma','Texas A&M','Duke','Baylor','Texas','Oregon State',"Saint Joseph's",'Cincinnati','Virginia Commonwealth','Northern Iowa','Yale','North Carolina-Wilmington','Green Bay','Cal State Bakersfield','Southern','North Carolina','Xavier','West Virginia','Kentucky','Indiana','Notre Dame','Wisconsin','Southern California','Providence','Pittsburgh','Michigan','Chattanooga','Stony Brook','Stephen F. Austin','Weber State','Fairleigh Dickinson','Kansas','Villanova','Miami (FL)','University of California','Maryland','Arizona','Iowa','Colorado','Connecticut','Temple','Vanderbilt','South Dakota State','Hawaii','Buffalo','North Carolina-Asheville','Austin Peay'])
+Round1.extend(['North Carolina', 'Kentucky', 'Houston', 'Kansas', 'Auburn', 'Iowa State', 'Wofford', 'Utah State', 'Washington', 'Seton Hall', 'Ohio State', 'New Mexico State', 'Northeastern', 'Georgia State', 'Abilene Christian', 'Iona', 'Gonzaga', 'Michigan', 'Texas Tech', 'Florida State', 'Marquette', 'Buffalo', 'Nevada', 'Syracuse', 'Baylor', 'Florida', 'Arizona State', 'Murray State', 'Vermont', 'Northern Kentucky', 'Montana', 'Fairleigh Dickinson', 'Duke', 'Michigan State', 'Louisiana State', 'Virginia Tech', 'Mississippi State', 'Maryland', 'Louisville', 'Virginia Commonwealth', 'Central Florida', 'Minnesota', 'Belmont', 'Liberty', 'Saint Louis', 'Yale', 'Bradley', 'North Dakota State', 'Virginia', 'Tennessee', 'Purdue', 'Kansas State', 'Wisconsin', 'Villanova', 'Cincinnati', 'Mississippi', 'Oklahoma', 'Iowa', "Saint Mary's (CA)", 'Oregon', 'UC-Irvine', 'Old Dominion', 'Colgate', 'Gardner-Webb'])#['Virginia','Michigan State','Utah','Iowa State','Purdue','Seton Hall','Dayton','Texas Tech','Butler','Syracuse','Gonzaga','Arkansas-Little Rock','Iona','Fresno State','Middle Tennessee','Hampton','Oregon','Oklahoma','Texas A&M','Duke','Baylor','Texas','Oregon State',"Saint Joseph's",'Cincinnati','Virginia Commonwealth','Northern Iowa','Yale','North Carolina-Wilmington','Green Bay','Cal State Bakersfield','Southern','North Carolina','Xavier','West Virginia','Kentucky','Indiana','Notre Dame','Wisconsin','Southern California','Providence','Pittsburgh','Michigan','Chattanooga','Stony Brook','Stephen F. Austin','Weber State','Fairleigh Dickinson','Kansas','Villanova','Miami (FL)','University of California','Maryland','Arizona','Iowa','Colorado','Connecticut','Temple','Vanderbilt','South Dakota State','Hawaii','Buffalo','North Carolina-Asheville','Austin Peay'])
 
 teams=list() #Initialize list for teams found in data from http://www.sports-reference.com/cbb/seasons/2017-school-stats.html
 ppg=list() #intialize lists
@@ -42,7 +42,7 @@ NYearsData=0;
 print("Found the following CSV files:")
 try:
 	while 1:
-		fileNAME='ppg_'+str(2017-NYearsData)+'.csv' #create filename for next csv
+		fileNAME='ppg_'+str(2019-NYearsData)+'.csv' #create filename for next csv
 		print(fileNAME) 
 		with open(fileNAME, 'r') as PPG: #open file
 			PPG_read = csv.reader(PPG, delimiter=',')
@@ -176,10 +176,10 @@ for i in range(NYearsData):
 	seed.append([])
 	TSeedind.append([])
 
-with open('16_TourneySeeds.csv', 'r') as RESULTS:
+with open('NCAATourneySeeds.csv', 'r') as RESULTS:
 	RESULTS_read = csv.reader(RESULTS, delimiter=',')
 	for row in RESULTS_read:
-		year=2017-int(row[0])
+		year=2019-int(row[0])
 		if year < NYearsData:
 			TSeedind[year].append(row[2])
 			seed[year].append(int(row[1][1:3]))
@@ -188,7 +188,7 @@ with open('16_TourneySeeds.csv', 'r') as RESULTS:
 #print(teams[2])
 #print(SOS[2][teams[2].index('Duke')])
 #print(TeamsIndex[2],'\n',teams[2],'\n',SOS[2],'\n',TeamsIndex[2].index('1463'),SOS[2][TeamsIndex[2].index('1463')],SOS[2].index(-5.18),len(teams[2]),len(TeamsIndex[2]))
-with open('16_TourneyCompactResults.csv', 'r') as RESULTS:
+with open('NCAATourneyCompactResults.csv', 'r') as RESULTS:
 	RESULTS_read = csv.reader(RESULTS, delimiter=',')
 	for row in RESULTS_read:
 		try:	
@@ -202,7 +202,7 @@ with open('16_TourneyCompactResults.csv', 'r') as RESULTS:
 				T2=2
 				#winner.append(0) 
 			#print(row[T1], " ", row[T2])
-			year=2017-int(row[0])
+			year=2019-int(row[0])
 			if year < NYearsData:
 				T1ind=TSeedind[year].index(row[T1])
 				T2ind=TSeedind[year].index(row[T2])
@@ -279,7 +279,7 @@ with open('ppg_14.csv', 'r') as PPGt:
 			SOSt.append(float(row[7]))
 '''
 
-X_train, X_test, y_train, y_test = train_test_split(DATAin,winner, test_size=0.001, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(DATAin,winner, test_size=0.000001, random_state=0)
 print('Training SVC: ')
 clf=svm.SVC()
 clf.fit(X_train,y_train)
@@ -289,7 +289,7 @@ print('Training GNB: ')
 gnb = GaussianNB()
 gnb.fit(X_train,y_train)
 print("GNB Accuracy Test: ",gnb.score(X_test,y_test))
-print(gnb.predict_proba(X_test[0]))
+print(gnb.predict_proba(X_test[0].reshape(1, -1)))
 ########################
 print('Training BNB: ')
 bnb = BernoulliNB()
@@ -325,7 +325,6 @@ print(neigh.predict_proba([testData]))
 print('Teting GNB: ')
 #print(.predict_proba([testData]))
 '''
-
 print(Round0)
 FoundTourneyTeams0=list()
 TeamsTourneyIndex0=list()
@@ -337,7 +336,8 @@ for iii in range(8):#Round0:
 		FoundTourneyTeams0.append(Round0[iii])
 		TeamsTourneyIndex0.append(Round0[iii])
 		Tind=teams[year].index(Round0[iii])
-		TourneyData0.append([Round0INDEXs[math.floor(iii/2)],ppg[year][Tind],opp[year][Tind],SRS[year][Tind],SOS[year][Tind]])
+		print(type(year),type(Tind))
+		TourneyData0.append([Round0INDEXs[int(math.floor(iii/2))],ppg[year][Tind],opp[year][Tind],SRS[year][Tind],SOS[year][Tind]])
 	else:
 		print("Team Not found: ",Round0[iii])
 
@@ -355,6 +355,7 @@ for i in range(0,7,2):
 	else:
 		print("Winner is: ",FoundTourneyTeams0[i+1])
 ########################
+print(len(Round1))
 print(Round1)
 FoundTourneyTeams1=list()
 TeamsTourneyIndex1=list()
